@@ -1,0 +1,22 @@
+{
+  "name": "MC-Troubleshoot",
+  "description": "Manhattan College Troubleshooting Action",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Robert Aparri",
+  "engines": {
+    "node": "~4.2"
+  },
+  "scripts": {
+    "lint": "semistandard --fix \"**/*.js\"",
+    "start": "functions deploy mcTroubleshoot --trigger-http",
+    "deploy": "gcloud beta functions deploy mcTroubleshoot --trigger-http --stage-bucket <storage_bucket_name>"
+  },
+  "dependencies": {
+    "actions-on-google": "^1.5.1"
+  },
+  "devDependencies": {
+    "semistandard": "^9.1.0"
+  }
+}
